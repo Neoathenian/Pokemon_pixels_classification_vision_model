@@ -1,2 +1,7 @@
 logs/
 wandb/
+Data2/
+lightning_logs/
+Evaluation/
+checkpoints/
+__pycache__/
