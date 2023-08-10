@@ -32,7 +32,7 @@ class BasicBlock(nn.Module):
 
 class Net(pl.LightningModule):
     name="ResNet_1"
-    num_classes=2
+    num_classes=10
     def __init__(self, block, num_blocks,):
         super(Net, self).__init__()
         self.in_planes = 64
@@ -107,8 +107,11 @@ class Net(pl.LightningModule):
         #Here´s the code for the validation step (right now it´s the same as the training step)
         x, y = batch
         y_hat = self(x)
+        print("Pre")
         loss = self.loss(y_hat, y) #F.cross_entropy(y_hat, y)
+        print("Pre2")
         self.log('val_loss', loss, on_epoch=True,on_step=False,prog_bar=True,logger=True)
+        print("Pos")
 
         # Compute and log additional metrics
         preds = y_hat.argmax(dim=1)
