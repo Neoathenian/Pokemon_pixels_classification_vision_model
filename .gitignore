@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 logs/
 wandb/
 Data2/
@@ -5,3 +6,12 @@ lightning_logs/
 Evaluation/
 checkpoints/
 __pycache__/
+=======
+logs/
+wandb/
+Data2/
+lightning_logs/
+Evaluation/
+checkpoints/
+__pycache__/
+>>>>>>> bc7a90d (just updates to db)
